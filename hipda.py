@@ -6,7 +6,7 @@ import re
 import glob
 from bs4 import BeautifulSoup
 
-def is_num_by_except(num):
+def is_num_by_except(num):#判断是否为纯数字的函数
     try:
         int(num)
         return True
@@ -27,8 +27,8 @@ postdata = {
 	'referer' : 'index.php',
 	'loginfield' : 'username',
 	'username' : '你的用户名',
-	'password' : '',
-	'questionid' : '0',
+	'password' : '加密后的密码',
+	'questionid' : '0',#是否有安全提问
 	'answer' : '',
 	'loginsubmit' : 'true',
 	'cookietime' : '2592000'}
