@@ -40,7 +40,7 @@ bsURL = 'http://www.hi-pda.com/forum/forumdisplay.php?fid=6'
 response = opener.open(bsURL)
 page = BeautifulSoup(response)
 tag = page.find_all(href = re.compile('viewthread\.php\?tid=\d*'))
-for each_tag in tag:
+for each_tag in tag:#遍历获取到的交易列表
 	if is_num_by_except(each_tag.get_text()) == True:
 		continue
 	else:
